@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +12,8 @@ body{background:#fff;color:#1e293b}
 header{padding:12px 4%;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--blue);position:sticky;top:0;background:#fff;z-index:90}
 .logo{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--blue);font-size:14px}.logo img{width:42px;height:42px;border-radius:50%;border:2px solid var(--blue)}
 .hamburger{font-size:26px;cursor:pointer;background:var(--blue);color:#fff;width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center}
-#sidebar{position:fixed;top:0;left:-300px;width:285px;height:100vh;background:#fff;z-index:200;transition:0.3s;box-shadow:10px 0 30px #0003;overflow:auto}
-#sidebar.open{left:0}
+#sidebar{position:fixed;top:0;right:-300px;width:285px;height:100vh;background:#fff;z-index:200;transition:0.3s;box-shadow:-10px 0 30px #0003;overflow:auto}
+#sidebar.open{right:0}
 #overlay{display:none;position:fixed;inset:0;background:#0006;z-index:150}
 #overlay.show{display:block}
 .side-head{background:linear-gradient(135deg,var(--blue),var(--dark));color:#fff;padding:18px;text-align:center}
@@ -37,19 +39,16 @@ input,textarea{width:100%;padding:11px;margin:6px 0;border:1px solid #cbd5e1;bor
 .pending-item{display:flex;gap:10px;border:1px solid #e2e8f0;padding:10px;border-radius:10px;margin:8px 0;align-items:center;background:#f8fafc}
 .pending-item img{width:65px;height:65px;object-fit:cover;border-radius:8px}
 .rule{border-left:4px solid var(--red);padding:10px 12px;background:#fff7ed;margin:8px 0;border-radius:0 8px 8px 0}
-footer{background:var(--dark);color:#94a3b8;padding:18px;text-align:center;font-size:11px}
 </style>
 </head>
 <body>
-
 <div id="overlay" onclick="closeSidebar()"></div>
 <div id="sidebar">
-<div class="side-head"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg"><h3 style="margin-top:8px">NLYSAUHI</h3><p style="font-size:11px;color:#93c5fd">Education is Light</p></div>
+<div class="side-head"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg  "><h3 style="margin-top:8px">NLYSAUHI</h3><p style="font-size:11px;color:#93c5fd">Education is Light</p><p style="font-size:10px;color:#cbd5e1">NGOK LUAL YAK YOUTHS</p></div>
 <div class="side-menu">
 <a href="#" onclick="showPage('home');closeSidebar()" class="active" id="m-home">🏠 Home</a>
 <a href="#" onclick="showPage('about');closeSidebar()" id="m-about">📖 About Us</a>
 <a href="#" onclick="showPage('leaders');closeSidebar()" id="m-leaders">👥 Leadership</a>
-<a href="#" onclick="showPage('history');closeSidebar()" id="m-history">📜 History & Mission</a>
 <a href="#" onclick="showPage('news');closeSidebar()" id="m-news">📰 News</a>
 <a href="#" onclick="showPage('gallery');closeSidebar()" id="m-gallery">🖼️ Gallery</a>
 <a href="#" onclick="showPage('rules');closeSidebar()" id="m-rules">📋 Website Rules</a>
@@ -58,88 +57,43 @@ footer{background:var(--dark);color:#94a3b8;padding:18px;text-align:center;font-
 <a href="#" onclick="openAdmin();closeSidebar()" style="background:#fef2f2;color:#b91c1c;font-weight:800">🔐 Admin Panel</a>
 </div>
 </div>
-
-<header><div class="logo"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg"> NLYSAUHI</div><div class="hamburger" onclick="openSidebar()">☰</div></header>
-
-<!-- PAGES -->
+<header><div class="logo"><img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg   "> NLYSAUHI</div><div class="hamburger" onclick="openSidebar()">☰</div></header>
 <div id="page-home" class="page active">
-<div class="hero"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg"><h2 style="font-size:18px;line-height:1.3">NGOK LUAL YAK STUDENTS' ASSOCIATION<br>AT UNIVERSITIES & HIGHER INSTITUTES</h2><div class="motto">EDUCATION IS LIGHT</div><p style="color:#cbd5e1;font-size:11px">Konyokonyo, Juba • Non-Profit • 3K Members</p><br><button onclick="showPage('about')" class="btn btn-white">About Us</button><button onclick="showPage('join')" class="btn btn-red">Join Membership</button></div>
-<div class="section" style="background:#f1f5f9"><h2>Latest Approved News</h2><div class="grid" id="newsGrid"></div></div>
-<div class="section"><h2>Approved Gallery</h2><div class="gallery" id="galleryGrid"></div></div>
+<div class="hero"><img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg "><h2 style="font-size:18px;line-height:1.3">NGOK LUAL YAK STUDENTS' ASSOCIATION</h2><div class="motto">EDUCATION IS LIGHT</div><p style="color:#cbd5e1;font-size:11px">Unity • Academic Support • Welfare</p><br><button onclick="showPage('about')" class="btn btn-white">About Us</button><button onclick="showPage('join')" class="btn btn-red">Join</button></div>
+<div class="section" style="background:#f1f5f9"><h2>Latest News</h2><div class="grid" id="newsGrid"></div></div>
+<div class="section"><h2>Gallery</h2><div class="gallery" id="galleryGrid"></div></div>
 </div>
-
-<div id="page-about" class="page">
-<div class="section"><h2>About NLYSAUHI</h2>
-<div class="card"><div class="card-content">
-<b>Full Name:</b> Ngok Lual Yak Students' Association at Universities and Higher Institutes (NLYSAUHI)<br><br>
-<b>Location:</b> Konyokonyo Market, Juba, South Sudan<br>
-<b>Type:</b> Non-Profit, Non-Political, Student Community Organization<br>
-<b>Motto:</b> <span style="color:var(--blue);font-weight:800">Education is Light</span><br><br>
-<b>Who We Are:</b><br>
-NLYSAUHI brings together all sons and daughters of Ngok Lual Yak who are studying in various universities and higher institutes across South Sudan and abroad. We were formed to unite, support, and empower our students academically, socially, and culturally.<br><br>
-<b>Objectives:</b><br>
-• Foster unity and brotherhood among Ngok Lual Yak students<br>
-• Provide academic support, tutoring, and mentorship<br>
-• Support welfare of needy students<br>
-• Preserve and promote Ngok Lual Yak culture<br>
-• Represent students in community and national affairs<br>
-• Guide secondary school leavers to university<br>
-• Organize sports, debates, and cultural events<br>
-• Build connection with elders and community leaders<br><br>
-<b>Membership:</b> Open to all Ngok Lual Yak students in universities, colleges, and higher institutes. Secondary students preparing for university are associate members.<br><br>
-<b>Why Education is Light?</b> Because education removes darkness of ignorance, poverty, and disunity. Light guides our community forward.
-</div></div></div>
-</div>
-
-<div id="page-leaders" class="page"><div class="section"><h2>Leadership Structure</h2><div class="grid"><div class="card"><div class="card-content" style="text-align:center"><div style="width:60px;height:60px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin:auto">C</div><b>Chairperson</b><br>Overall leadership, represents association<br>University of Juba</div></div><div class="card"><div class="card-content" style="text-align:center"><div style="width:60px;height:60px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin:auto">S</div><b>Secretary General</b><br>Records, communication, coordination</div></div><div class="card"><div class="card-content" style="text-align:center"><div style="width:60px;height:60px;background:#059669;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin:auto">F</div><b>Finance Secretary</b><br>Money, fundraising, budget</div></div><div class="card"><div class="card-content" style="text-align:center"><div style="width:60px;height:60px;background:#7c3aed;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin:auto">I</div><b>Information Secretary</b><br>News, website, publicity</div></div></div></div></div>
-
-<div id="page-history" class="page"><div class="section"><h2>History, Mission & Vision</h2>
-<div class="card"><div class="card-content"><b>📜 History:</b> NLYSAUHI was formed by early Ngok Lual Yak students in Juba who saw need for unity away from home. From small meetings under trees, it grew to 3000+ Members across all universities. Our motto is Education is Light.<br><br><b>🎯 Mission:</b> To foster unity, promote education, support welfare, and empower Ngok Lual Yak students to become future leaders.<br><br><b>👁️ Vision:</b> An educated, united, self-reliant Ngok Lual Yak community where every student succeeds and gives back.<br><br><b>💎 Core Values:</b> Unity, Education, Service, Respect, Integrity, Culture.</div></div></div></div>
-
-<div id="page-news" class="page"><div class="section" style="background:#f1f5f9"><h2>News - Submit & Approved</h2><button onclick="submitNewsPanel.style.display='block'" class="btn btn-red">+ Submit News with Photo</button><div class="grid" id="newsGrid2" style="margin-top:12px"></div></div></div>
-
-<div id="page-gallery" class="page"><div class="section"><h2>Gallery</h2><button onclick="submitPhotoPanel.style.display='block'" class="btn btn-red">+ Submit Photo</button><div class="gallery" id="galleryGrid2" style="margin-top:12px"></div></div></div>
-
-<div id="page-rules" class="page"><div class="section"><h2>📋 Website Rules & Constitution</h2>
-<div class="card"><div class="card-content">
-<h3 style="color:var(--red)">1. Approval System</h3>
-<div class="rule">All news and photos MUST be approved by admin before appearing on public website. No auto-posting.</div>
-<h3 style="color:var(--blue);margin-top:12px">2. Content Rules</h3>
-<div class="rule">✅ Allowed: Education news, association events, sports, culture, student achievements, official announcements.<br>❌ NOT Allowed: Politics, tribal hate, insults, fake news, pornography, violence, personal attacks.</div>
-<h3 style="color:var(--blue);margin-top:12px">3. Photo Rules</h3>
-<div class="rule">• Photos must be clear, respectful, related to NLYSAUHI.<br>• No edited fake photos.<br>• Must have caption and owner name.<br>• Max 5 photos per person per week.</div>
-<h3 style="color:var(--blue);margin-top:12px">4. News Rules</h3>
-<div class="rule">• Title must be short and true.<br>• Description must be factual.<br>• Must include real photo (no stolen internet photos without source).<br>• Author must use real name.</div>
-<h3 style="color:var(--blue);margin-top:12px">5. Membership Rules</h3>
-<div class="rule">• Members must respect all leaders and members.<br>• Must attend meetings when possible.<br>• No discrimination based on gender, clan, or university.<br>• Membership can be revoked for misconduct.</div>
-<h3 style="color:var(--blue);margin-top:12px">6. Admin Powers</h3>
-<div class="rule">• Admin (Chairperson & Info Sec) can Approve, Reject, or Delete any content.<br>• Admin login is secret: only minyielmakuach@gmail.com<br>• Admin must check facts before approving.</div>
-<h3 style="color:var(--blue);margin-top:12px">7. Privacy</h3>
-<div class="rule">No sharing of phone numbers or private data of members without permission. Use official contacts only: 0921 300 670 / 0920 616 316</div>
-<p style="margin-top:12px;font-weight:700">Breaking rules = content deleted + warning. Repeat = banned from submitting.</p>
-</div></div></div></div>
-
-<div id="page-join" class="page"><div class="section"><h2>Join Membership</h2><div class="card" style="max-width:500px;margin:auto"><div class="card-content"><form action="https://formsubmit.co/Minyielmakuach@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input name="Name" placeholder="Full Name" required><input name="University" placeholder="University & Course" required><input name="Phone" placeholder="Phone Number" required><input name="Payam" placeholder="Payam / Village in Ngok Lual Yak"><button class="btn btn-red" style="width:100%">Submit Application</button></form><p style="font-size:11px;color:#666;margin-top:8px">By joining you agree to Website Rules and Association Constitution.</p></div></div></div></div>
-
-<div id="page-contact" class="page"><div class="section"><h2>Contact Us</h2><div class="grid"><div class="card"><div class="card-content"><b>📍 Address:</b><br>Konyokonyo Market, Juba<br>South Sudan<br><br><b>📞 Phone:</b><br>0921 300 670<br>0920 616 316<br><br><b>📧 Email:</b><br>Minyielmakuach@gmail.com<br><br><b>🌐 Facebook:</b><br>NLYSAUHI - 3K followers</div></div><div class="card"><div class="card-content"><b>Send Message</b><form action="https://formsubmit.co/Minyielmakuach@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input name="Name" placeholder="Your Name" required><input name="Message" placeholder="Your Message" required><button class="btn btn-blue" style="width:100%">Send Message</button></form></div></div></div></div></div>
-
-<footer style="background:var(--dark);color:#94a3b8;padding:16px;text-align:center;font-size:11px">© 2026 NLYSAUHI • Education is Light • Ngok Lual Yak Youths</footer>
-
-<!-- SUBMIT MODALS -->
-<div id="submitPhotoPanel"><div class="modal"><h3>Submit Photo for Approval</h3><input type="file" id="submitFile" accept="image/*"><input id="submitCaption" placeholder="Caption"><input id="submitName" placeholder="Your Name"><button onclick="submitForApproval()" class="btn btn-red" style="width:100%">Submit</button><p id="submitStatus"></p><button onclick="submitPhotoPanel.style.display='none'" class="btn" style="width:100%;background:#eee;color:#333">Close</button></div></div>
-<div id="submitNewsPanel"><div class="modal"><h3>Submit News with Photo</h3><input id="newsTitle" placeholder="Title*"><textarea id="newsDesc" placeholder="Description*" rows="4"></textarea><label style="font-size:11px;font-weight:700">Photo* Required</label><input type="file" id="newsFile" accept="image/*"><input id="newsAuthor" placeholder="Your Name"><button onclick="submitNews()" class="btn btn-red" style="width:100%">Submit</button><p id="newsSubmitStatus"></p><button onclick="submitNewsPanel.style.display='none'" class="btn" style="width:100%;background:#eee;color:#333">Close</button></div></div>
-
-<!-- ADMIN -->
-<div id="adminPanel"><div class="modal" style="max-width:700px"><div style="background:linear-gradient(135deg,#1e3a8a,#0f172a);color:#fff;padding:18px;text-align:center;border-radius:12px;margin:-18px -18px 12px -18px"><h2>Secure Admin</h2><p style="color:#93c5fd;font-size:11px">minyielmakuach@gmail.com</p></div>
+<div id="page-about" class="page"><div class="section"><h2>About NLYSAUHI</h2><div class="card"><div class="card-content"><b>Full Name:</b> Ngok Lual Yak Students' Association at Universities and Higher Institutes<br><br><b>Location:</b> Konyokonyo, Juba<br><b>Motto:</b> <span style="color:#1e3a8a;font-weight:800">Education is Light</span><br><br><b>Who We Are:</b> We unite all Ngok Lual Yak students in universities across South Sudan and abroad. Formed to support academically, socially, culturally. From small meetings under trees to 3000+ followers.<br><br><b>Objectives:</b> Unity, academic support, welfare, culture, representation, guidance, sports.<br><br><b>Mission:</b> Foster unity, promote education, support welfare.<br><b>Vision:</b> Educated, united, self-reliant community.</div></div></div></div>
+<div id="page-leaders" class="page"><div class="section"><h2>Leadership</h2><div class="grid"><div class="card"><div class="card-content" style="text-align:center"><b>Chairperson: Athiei John</b><br>Overall leadership</div></div><div class="card"><div class="card-content" style="text-align:center"><b>Secretary General: Monyngok Arang</b><br>Records</div></div><div class="card"><div class="card-content" style="text-align:center"><b>Info Secretary: Makuach Minyiel</b><br>Website & News</div></div></div></div></div>
+<div id="page-news" class="page"><div class="section" style="background:#f1f5f9"><h2>News</h2><button onclick="submitNewsPanel.style.display='block'" class="btn btn-red">+ Submit News (Many Photos)</button><div class="grid" id="newsGrid2" style="margin-top:12px"></div></div></div>
+<div id="page-gallery" class="page"><div class="section"><h2>Gallery</h2><button onclick="submitPhotoPanel.style.display='block'" class="btn btn-red">+ Submit Photos (Many at Once)</button><div class="gallery" id="galleryGrid2" style="margin-top:12px"></div></div></div>
+<div id="page-rules" class="page"><div class="section"><h2>📋 Website Rules</h2><div class="card"><div class="card-content"><div class="rule">✅ Allowed: Education, events, sports, culture.<br>❌ Not Allowed: Politics, hate, fake news.</div><div class="rule"><b>Approval:</b> All content approved by admin.</div><div class="rule"><b>Multi-Photos:</b> You can now select MANY photos at once!</div><div class="rule"><b>Admin:</b> minyielmakuach@gmail.com</div><div class="rule"><b>Privacy:</b> No private numbers. Official: 0921 300 670 / 0920 616 316</div></div></div></div></div>
+<div id="page-join" class="page"><div class="section"><h2>Join</h2><div class="card" style="max-width:500px;margin:auto"><div class="card-content"><form action="https://formsubmit.co/Minyielmakuach@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input name="Name" placeholder="Full Name" required><input name="University" placeholder="University & Course" required><input name="Phone" placeholder="Phone" required><button class="btn btn-red" style="width:100%">Submit</button></form></div></div></div></div>
+<div id="page-contact" class="page"><div class="section"><h2>Contact</h2><div class="grid"><div class="card"><div class="card-content"><b>Address:</b> Konyokonyo Market, Juba<br><b>Phone:</b> 0921 300 670 / 0920 616 316<br><b>Email:</b> Minyielmakuach@gmail.com</div></div><div class="card"><div class="card-content"><form action="https://formsubmit.co/Minyielmakuach@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input name="Name" placeholder="Your Name" required><input name="Message" placeholder="Message" required><button class="btn btn-blue" style="width:100%">Send</button></form></div></div></div></div></div>
+<footer style="background:#0f172a;color:#94a3b8;padding:16px;text-align:center;font-size:11px">© 2026 All rights reserved NLYSAUHI •@Makuach </footer>
+<div id="submitPhotoPanel"><div class="modal"><h3>Submit MANY Photos at Once</h3><input type="file" id="submitFile" accept="image/*" multiple><input id="submitCaption" placeholder="Caption for all"><input id="submitName" placeholder="Your Name"><button onclick="submitForApproval()" class="btn btn-red" style="width:100%">Submit All for Approval</button><p id="submitStatus"></p><button onclick="submitPhotoPanel.style.display='none'" class="btn" style="width:100%;background:#eee;color:#333">Close</button></div></div>
+<div id="submitNewsPanel"><div class="modal"><h3>Submit News with MANY Photos</h3><input id="newsTitle" placeholder="Title*"><textarea id="newsDesc" placeholder="Description*" rows="4"></textarea><input type="file" id="newsFile" accept="image/*" multiple><input id="newsAuthor" placeholder="Your Name"><button onclick="submitNews()" class="btn btn-red" style="width:100%">Submit All</button><p id="newsSubmitStatus"></p><button onclick="submitNewsPanel.style.display='none'" class="btn" style="width:100%;background:#eee;color:#333">Close</button></div></div>
+<div id="adminPanel"><div class="modal" style="max-width:700px"><div style="background:linear-gradient(135deg,#1e3a8a,#0f172a);color:#fff;padding:18px;text-align:center;border-radius:12px;margin:-18px -18px 12px -18px"><h2>Admins Only</h2><br>
 <div id="loginBox"><input id="email" type="email" placeholder="Admin Email"><input id="pass" type="password" placeholder="Password"><button onclick="adminLogin()" class="btn btn-blue" style="width:100%">Login</button><button onclick="closeAdmin()" class="btn" style="width:100%;background:#eee;color:#333">Back</button><p id="loginMsg" style="color:#b91c1c;font-size:12px"></p></div>
-<div id="adminContent" style="display:none"><h3 style="color:#b91c1c">⏳ Pending News</h3><div id="pendingNewsList"></div><hr style="margin:10px 0"><h3 style="color:#b91c1c">⏳ Pending Photos</h3><div id="pendingList"></div><hr style="margin:10px 0"><h3>✅ Approved</h3><div id="approvedNewsList"></div><div id="approvedList"></div><button onclick="logout()" class="btn btn-red" style="width:100%;margin-top:10px">Logout</button><button onclick="closeAdmin()" class="btn" style="width:100%;background:#eee;color:#333">Back to Public</button></div>
+<div id="adminContent" style="display:none"><h3 style="color:#b91c1c">⏳ Pending News</h3><div id="pendingNewsList"></div><hr style="margin:10px 0"><h3 style="color:#b91c1c">⏳ Pending Photos</h3><div id="pendingList"></div><hr style="margin:10px 0"><h3>✅ Approved News</h3><div id="approvedNewsList"></div><hr><h3>✅ Approved Photos</h3><div id="approvedList"></div><button onclick="logout()" class="btn btn-red" style="width:100%;margin-top:10px">Logout</button><button onclick="closeAdmin()" class="btn" style="width:100%;background:#eee;color:#333">Back</button></div>
 </div></div>
-
-<script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyAyvYzV6Poob-wXHR2FNv0wrwSDvFUuchU",
+  authDomain: "makuachjudu.firebaseapp.com",
+  projectId: "makuachjudu",
+  storageBucket: "makuachjudu.firebasestorage.app",
+  messagingSenderId: "446303864336",
+  appId: "1:446303864336:web:6e97bf6325df99727dec95"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 const ADMIN_EMAIL="minyielmakuach@gmail.com", ADMIN_PASSWORD="5oftw@r9";
-function openSidebar(){sidebar.classList.add('open');overlay.classList.add('show');}
-function closeSidebar(){sidebar.classList.remove('open');overlay.classList.remove('show');}
-function showPage(name){
+window.openSidebar=()=>{sidebar.classList.add('open');overlay.classList.add('show');}
+window.closeSidebar=()=>{sidebar.classList.remove('open');overlay.classList.remove('show');}
+window.showPage=(name)=>{
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+name).classList.add('active');
   document.querySelectorAll('.side-menu a').forEach(a=>a.classList.remove('active'));
@@ -147,45 +101,98 @@ function showPage(name){
   window.scrollTo(0,0);
 }
 function toBase64(f){return new Promise((r,j)=>{let fr=new FileReader();fr.readAsDataURL(f);fr.onload=()=>r(fr.result);fr.onerror=j;});}
-function loadPublic(){
-  let photos=JSON.parse(localStorage.getItem('photos')||'[]');
-  let news=JSON.parse(localStorage.getItem('approvedNews')||'[]');
-  let grids=[['newsGrid','galleryGrid'],['newsGrid2','galleryGrid2']];
-  grids.forEach(([nId,gId])=>{
-    let nG=document.getElementById(nId), gG=document.getElementById(gId);
-    if(!nG) return;
-    nG.innerHTML=news.length?'':'<div class="card"><div class="card-content">No approved news yet.</div></div>';
-    news.forEach(n=>{nG.innerHTML+=`<div class="card"><img class="news-img" src="${n.photoUrl}"><div class="card-content"><small style="color:#b91c1c;font-weight:800">${new Date(n.created).toLocaleDateString()}</small><h4 style="color:#1e3a8a">${n.title}</h4><p style="font-size:12px">${n.desc}</p><small style="color:#888">By ${n.author||'Member'}</small></div></div>`;});
-    gG.innerHTML=photos.length?'':'<div>No approved photos</div>';
-    photos.forEach(p=>{gG.innerHTML+=`<div style="background-image:url('${p.url}')"><span style="background:#000a;color:#fff;padding:3px 8px;border-radius:20px;font-size:10px">${p.caption||''}</span></div>`;});
-  });
+async function loadPublic(){
+  try{
+    const photosSnap = await getDocs(collection(db, "photos"));
+    const newsSnap = await getDocs(collection(db, "approvedNews"));
+    let photos = photosSnap.docs.map(d=>d.data());
+    let news = newsSnap.docs.map(d=>d.data());
+    let grids=[['newsGrid','galleryGrid'],['newsGrid2','galleryGrid2']];
+    grids.forEach(([nId,gId])=>{
+      let nG=document.getElementById(nId), gG=document.getElementById(gId);
+      if(!nG) return;
+      nG.innerHTML=news.length?'':'<div class="card"><div class="card-content">No approved news yet.</div></div>';
+      news.forEach(n=>{nG.innerHTML+=`<div class="card"><img class="news-img" src="${n.photoUrl}"><div class="card-content"><small style="color:#b91c1c;font-weight:800">${new Date(n.created).toLocaleDateString()}</small><h4 style="color:#1e3a8a">${n.title}</h4><p style="font-size:12px">${n.desc}</p><small style="color:#888">By ${n.author||'Member'}</small></div></div>`;});
+      gG.innerHTML=photos.length?'':'<div>No approved photos</div>';
+      photos.forEach(p=>{gG.innerHTML+=`<div style="background-image:url('${p.url}')"><span style="background:#000a;color:#fff;padding:3px 8px;border-radius:20px;font-size:10px">${p.caption||''}</span></div>`;});
+    });
+  }catch(e){console.log(e)}
 }
 loadPublic();
-async function submitForApproval(){
-  const f=submitFile.files[0];if(!f)return alert('Choose photo');submitStatus.innerText='Processing...';
-  const url=await toBase64(f);let pend=JSON.parse(localStorage.getItem('pendingPhotos')||'[]');pend.unshift({url,caption:submitCaption.value,submitter:submitName.value,created:Date.now()});localStorage.setItem('pendingPhotos',JSON.stringify(pend));submitStatus.innerText='✅ Sent! Approve in Admin.';loadPublic();
+window.loadPublic=loadPublic;
+window.submitForApproval=async()=>{
+  const files = submitFile.files;
+  if(!files.length) return alert('Choose photos');
+  submitStatus.innerText=`Uploading ${files.length} photos...`;
+  for(let f of files){
+    const url=await toBase64(f);
+    await addDoc(collection(db, "pendingPhotos"), {url,caption:submitCaption.value,submitter:submitName.value,created:Date.now()});
+  }
+  submitStatus.innerText=`✅ ${files.length} photos sent! Admin will approve.`;
+  loadPublic();
 }
-async function submitNews(){
-  const f=newsFile.files[0];if(!newsTitle.value||!newsDesc.value||!f)return alert('Need Title, Desc, Photo');newsSubmitStatus.innerText='Processing...';
-  const photoUrl=await toBase64(f);let pend=JSON.parse(localStorage.getItem('pendingNews')||'[]');pend.unshift({title:newsTitle.value,desc:newsDesc.value,author:newsAuthor.value,photoUrl,created:Date.now()});localStorage.setItem('pendingNews',JSON.stringify(pend));newsSubmitStatus.innerText='✅ News sent! Approve in Admin.';loadPublic();
+window.submitNews=async()=>{
+  const files = newsFile.files;
+  if(!newsTitle.value||!newsDesc.value||!files.length) return alert('Need Title, Desc, Photos');
+  newsSubmitStatus.innerText=`Uploading ${files.length} photos for news...`;
+  for(let f of files){
+    const photoUrl=await toBase64(f);
+    await addDoc(collection(db, "pendingNews"), {title:newsTitle.value,desc:newsDesc.value,author:newsAuthor.value,photoUrl,created:Date.now()});
+  }
+  newsSubmitStatus.innerText=`✅ News with ${files.length} photos sent!`;
+  loadPublic();
 }
-function openAdmin(){adminPanel.style.display='block';if(localStorage.getItem('nlysauhi_admin')==='logged'){loginBox.style.display='none';adminContent.style.display='block';loadAdmin();}}
-function closeAdmin(){adminPanel.style.display='none';}
-function adminLogin(){if(email.value.trim()===ADMIN_EMAIL&&pass.value===ADMIN_PASSWORD){localStorage.setItem('nlysauhi_admin','logged');loginBox.style.display='none';adminContent.style.display='block';loadAdmin();}else loginMsg.innerText='Wrong Email or Password';}
-function logout(){localStorage.removeItem('nlysauhi_admin');location.reload();}
-function loadAdmin(){
-  let pendP=JSON.parse(localStorage.getItem('pendingPhotos')||'[]'), photos=JSON.parse(localStorage.getItem('photos')||'[]'), pendN=JSON.parse(localStorage.getItem('pendingNews')||'[]'), apprN=JSON.parse(localStorage.getItem('approvedNews')||'[]');
-  pendingList.innerHTML=pendP.length?'':'<p style="color:#888;font-size:11px">No pending</p>';pendP.forEach((p,i)=>{pendingList.innerHTML+=`<div class="pending-item"><img src="${p.url}"><div style="flex:1"><b>${p.caption||''}</b></div><button onclick="approvePhoto(${i})" style="background:green;color:#fff;padding:6px 9px;border-radius:6px;border:none">Approve</button><button onclick="rejectPhoto(${i})" style="background:#b91c1c;color:#fff;padding:6px 9px;border-radius:6px;border:none">Reject</button></div>`;});
-  approvedList.innerHTML='';photos.forEach((p,i)=>{approvedList.innerHTML+=`<div class="pending-item"><img src="${p.url}"><div style="flex:1">${p.caption||''}</div><button onclick="deletePhoto(${i})" style="background:#666;color:#fff;padding:5px 8px;border-radius:6px;border:none">Delete</button></div>`;});
-  pendingNewsList.innerHTML=pendN.length?'':'<p style="color:#888;font-size:11px">No pending news</p>';pendN.forEach((n,i)=>{pendingNewsList.innerHTML+=`<div class="card"><img class="news-img" src="${n.photoUrl}" style="height:110px"><div class="card-content"><b>${n.title}</b><p style="font-size:11px">${n.desc}</p><button onclick="approveNews(${i})" style="background:green;color:#fff;padding:6px 9px;border-radius:6px;border:none">Approve</button><button onclick="rejectNews(${i})" style="background:#b91c1c;color:#fff;padding:6px 9px;border-radius:6px;border:none">Reject</button></div></div>`;});
-  approvedNewsList.innerHTML='';apprN.forEach((n,i)=>{approvedNewsList.innerHTML+=`<div class="pending-item"><img src="${n.photoUrl}"><div style="flex:1"><b>${n.title}</b></div><button onclick="deleteNews(${i})" style="background:#666;color:#fff;padding:5px 8px;border-radius:6px;border:none">Delete</button></div>`;});
+window.openAdmin=()=>{adminPanel.style.display='block';if(localStorage.getItem('nlysauhi_admin')==='logged'){loginBox.style.display='none';adminContent.style.display='block';loadAdmin();}}
+window.closeAdmin=()=>{adminPanel.style.display='none';}
+window.adminLogin=()=>{
+  if(email.value.trim()===ADMIN_EMAIL&&pass.value===ADMIN_PASSWORD){
+    localStorage.setItem('nlysauhi_admin','logged');loginBox.style.display='none';adminContent.style.display='block';loadAdmin();
+  }else loginMsg.innerText='Wrong Email or Password';
 }
-function approvePhoto(i){let pend=JSON.parse(localStorage.getItem('pendingPhotos')||'[]'), photos=JSON.parse(localStorage.getItem('photos')||'[]');photos.unshift(pend.splice(i,1)[0]);localStorage.setItem('pendingPhotos',JSON.stringify(pend));localStorage.setItem('photos',JSON.stringify(photos));loadAdmin();loadPublic();}
-function rejectPhoto(i){let pend=JSON.parse(localStorage.getItem('pendingPhotos')||'[]');pend.splice(i,1);localStorage.setItem('pendingPhotos',JSON.stringify(pend));loadAdmin();}
-function deletePhoto(i){let photos=JSON.parse(localStorage.getItem('photos')||'[]');photos.splice(i,1);localStorage.setItem('photos',JSON.stringify(photos));loadAdmin();loadPublic();}
-function approveNews(i){let pend=JSON.parse(localStorage.getItem('pendingNews')||'[]'), appr=JSON.parse(localStorage.getItem('approvedNews')||'[]');appr.unshift(pend.splice(i,1)[0]);localStorage.setItem('pendingNews',JSON.stringify(pend));localStorage.setItem('approvedNews',JSON.stringify(appr));loadAdmin();loadPublic();}
-function rejectNews(i){let pend=JSON.parse(localStorage.getItem('pendingNews')||'[]');pend.splice(i,1);localStorage.setItem('pendingNews',JSON.stringify(pend));loadAdmin();}
-function deleteNews(i){let appr=JSON.parse(localStorage.getItem('approvedNews')||'[]');appr.splice(i,1);localStorage.setItem('approvedNews',JSON.stringify(appr));loadAdmin();loadPublic();}
+window.logout=()=>{localStorage.removeItem('nlysauhi_admin');location.reload();}
+window.loadAdmin=async()=>{
+  const pendPSnap = await getDocs(collection(db, "pendingPhotos"));
+  const photosSnap = await getDocs(collection(db, "photos"));
+  const pendNSnap = await getDocs(collection(db, "pendingNews"));
+  const apprNSnap = await getDocs(collection(db, "approvedNews"));
+  let pendP = pendPSnap.docs.map(d=>({id:d.id,...d.data()}));
+  let photos = photosSnap.docs.map(d=>({id:d.id,...d.data()}));
+  let pendN = pendNSnap.docs.map(d=>({id:d.id,...d.data()}));
+  let apprN = apprNSnap.docs.map(d=>({id:d.id,...d.data()}));
+  pendingList.innerHTML=pendP.length?'':'<p style="color:#888;font-size:11px">No pending</p>';
+  pendP.forEach(p=>{
+    pendingList.innerHTML+=`<div class="pending-item"><img src="${p.url}"><div style="flex:1"><b>${p.caption||''}</b></div><button onclick="approvePhoto('${p.id}')" style="background:green;color:#fff;padding:6px 9px;border-radius:6px;border:none">Approve</button><button onclick="rejectPhoto('${p.id}')" style="background:#b91c1c;color:#fff;padding:6px 9px;border-radius:6px;border:none">Reject</button></div>`;
+  });
+  approvedList.innerHTML='';
+  photos.forEach(p=>{
+    approvedList.innerHTML+=`<div class="pending-item"><img src="${p.url}"><div style="flex:1">${p.caption||''}</div><button onclick="deletePhoto('${p.id}')" style="background:#666;color:#fff;padding:5px 8px;border-radius:6px;border:none">Delete</button></div>`;
+  });
+  pendingNewsList.innerHTML=pendN.length?'':'<p style="color:#888;font-size:11px">No pending news</p>';
+  pendN.forEach(n=>{
+    pendingNewsList.innerHTML+=`<div class="card"><img class="news-img" src="${n.photoUrl}" style="height:110px"><div class="card-content"><b>${n.title}</b><p style="font-size:11px">${n.desc}</p><button onclick="approveNews('${n.id}')" style="background:green;color:#fff;padding:6px 9px;border-radius:6px;border:none">Approve</button><button onclick="rejectNews('${n.id}')" style="background:#b91c1c;color:#fff;padding:6px 9px;border-radius:6px;border:none">Reject</button></div></div>`;
+  });
+  approvedNewsList.innerHTML='';
+  apprN.forEach(n=>{
+    approvedNewsList.innerHTML+=`<div class="pending-item"><img src="${n.photoUrl}"><div style="flex:1"><b>${n.title}</b></div><button onclick="deleteNews('${n.id}')" style="background:#666;color:#fff;padding:5px 8px;border-radius:6px;border:none">Delete</button></div>`;
+  });
+  window._cache={pendP,photos,pendN,apprN};
+}
+window.approvePhoto=async(id)=>{
+  let p=window._cache.pendP.find(x=>x.id===id);
+  await addDoc(collection(db,"photos"),{url:p.url,caption:p.caption,submitter:p.submitter,created:p.created});
+  await deleteDoc(doc(db,"pendingPhotos",id));
+  loadAdmin();loadPublic();
+}
+window.rejectPhoto=async(id)=>{await deleteDoc(doc(db,"pendingPhotos",id));loadAdmin();}
+window.deletePhoto=async(id)=>{await deleteDoc(doc(db,"photos",id));loadAdmin();loadPublic();}
+window.approveNews=async(id)=>{
+  let n=window._cache.pendN.find(x=>x.id===id);
+  await addDoc(collection(db,"approvedNews"),{title:n.title,desc:n.desc,author:n.author,photoUrl:n.photoUrl,created:n.created});
+  await deleteDoc(doc(db,"pendingNews",id));
+  loadAdmin();loadPublic();
+}
+window.rejectNews=async(id)=>{await deleteDoc(doc(db,"pendingNews",id));loadAdmin();}
+window.deleteNews=async(id)=>{await deleteDoc(doc(db,"approvedNews",id));loadAdmin();loadPublic();}
 </script>
 </body>
 </html>
