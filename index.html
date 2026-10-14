@@ -1,1 +1,106 @@
- 
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+      html{
+          /* LOGO BACKGROUND - Adjusts to device width */
+body {
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-FQySbP1sVGXfS_8P5yami4CUyQgzTsUz3k-YSrSHtwcergpzwoJsZY1fcPAgkwbUZKkwteNHQo66wFG0QIQMftKQPjMqZ7nkVTYNoONpSta33MvFYhd4hNjoE7BYaVxu6U0aKlzud94qciYCjpqF_5XrSPH7gEm_dOhIXhBN9FxhQ/s1600/Logo.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* TRANSPARENT LAYER - Makes text readable */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(250,250,250,0.45);
+  z-index: -1;
+}
+
+/* MOBILE - Logo fits width */
+@media (max-width: 600px) {
+  body {
+    background-size: contain;
+    background-color: #f5f5f5;
+  }
+}
+        
+        background: rgba(0,0,0,100,0.5)
+      }
+      input{
+           margin:10px; 
+           width: 90%;
+           padding: 15px;
+           border-radius:10px;
+      }
+      textarea{
+        margin:10px;
+        width:90%;
+        height:95px;
+        padding: 15px;
+        border-radius:20px;
+      }
+      button{
+        margin-left:70px;
+        width: 65%;
+        height: 50px;
+        padding: 15px;
+        border-radius:10px;
+        color: black;
+      }
+      button:hover{
+        background: purple;
+      }
+      </style>
+  </head>
+  <body>
+    <center><h2>MAKUACH MINYIEL MACHAR </h2></center>
+    <a href="https://ngok-lual-yak-students-in-juba.vercel.app/#" target="_blank"><h1><center>WEBSITE</center></h1></a>
+       <form id="waForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="text" id="phone" placeholder="Your Phone">
+  <textarea id="message" placeholder="Your Message" required></textarea><br>
+  <button type="submit">SEND WHATSAPP MESSAGE</button>
+</form>
+
+<script>
+let waFormPocket = document.getElementById('waForm');
+
+waFormPocket.addEventListener('submit', function(e){
+  e.preventDefault(); // stop page from reloading
+
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let message = document.getElementById('message').value;
+
+  // Build the WhatsApp message
+  let finalText = "Name: " + name + "%0A" + "Phone: " + phone + "%0A" + "Message: " + message;
+  // %0A means new line in WhatsApp link
+
+  // Your WhatsApp number
+  let myNumber = "211920616316";
+
+  // Create WhatsApp link and open
+  let waLink = "https://wa.me/" + myNumber + "?text=" + finalText;
+  
+  window.open(waLink, '_blank');
+});
+</script>
+
+    
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
